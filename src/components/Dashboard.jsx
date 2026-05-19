@@ -35,8 +35,12 @@ export default function Dashboard() {
       // Fetch Latest Tracking Data
       const response = await fetch("/api/location");
 
+      
+
       // Convert Response Into JSON
       const data = await response.json();
+
+      console.log(data);
 
       // If API Success
       if (data.success) {
