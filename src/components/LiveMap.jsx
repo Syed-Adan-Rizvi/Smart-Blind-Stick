@@ -44,9 +44,10 @@ function RecenterMap({ lat, lng }) {
 // ================= Main Map Component =================
 export default function LiveMap({ trackingData }) {
 
-  // Default Location (tumhari city)
-  const latitude = trackingData?.latitude || 31.4504;
-  const longitude = trackingData?.longitude || 73.1350;
+ // Nayi lines (Fixed)
+  // parseFloat() isay String se Number mein badal dega
+  const latitude = parseFloat(trackingData?.latitude) || 31.4504;
+  const longitude = parseFloat(trackingData?.longitude) || 73.1350;
 
 
   return (
