@@ -6,10 +6,42 @@ const TrackingSchema = new mongoose.Schema({
   longitude: String,
   sos: Boolean,
   message: String,
-  reset_requested: { type: Boolean, default: false } // <-- YEH NAYI LINE ADD KARNI HAI
+  reset_requested: { type: Boolean, default: false }
+}, 
+{ 
+  timestamps: true // <-- YEH NAYI LINE AUTOMATICALLY updatedAt BANAYEGI
 });
 
 export default mongoose.models.Tracking || mongoose.model("Tracking", TrackingSchema);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // src/models/Tracking.js
+// import mongoose from "mongoose";
+
+// const TrackingSchema = new mongoose.Schema({
+//   latitude: String,
+//   longitude: String,
+//   sos: Boolean,
+//   message: String,
+//   reset_requested: { type: Boolean, default: false } // <-- YEH NAYI LINE ADD KARNI HAI
+// });
+
+// export default mongoose.models.Tracking || mongoose.model("Tracking", TrackingSchema);
 
 
 
